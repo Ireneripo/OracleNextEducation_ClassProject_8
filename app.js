@@ -18,24 +18,38 @@ class CuentaCorriente {
   }
 
   depositoEnCuenta(valor) {
-    if (valor < 0) {
+    if (valor > 0) {
       this.#saldo += valor;
     }
+    return this.#saldo;
   }
 
   retirarDeCuenta(valor) {
     if (valor <= this.#saldo) {
       this.#saldo -= valor;
     }
+    return this.#saldo;
+  }
+
+  verSaldo() {
+    return this.#saldo;
   }
 }
 
 const cuentaDeLeonardo = new CuentaCorriente();
-// cuentaDeLeonardo.#saldo = 0;
-cuentaDeLeonardo.depositoEnCuenta(100);
-console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.retirarDeCuenta(50);
-console.log(cuentaDeLeonardo);
+// cuentaDeLeonardo.saldo = 0;
+
+let saldo = cuentaDeLeonardo.verSaldo();
+console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+
+saldo = cuentaDeLeonardo.depositoEnCuenta(100);
+console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+
+saldo = cuentaDeLeonardo.retirarDeCuenta(60);
+console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+
+saldo = cuentaDeLeonardo.depositoEnCuenta(-10);
+console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 
 const cliente1 = new Cliente();
 
@@ -74,3 +88,50 @@ console.log('==========');
 
 console.log(cuentaCorriente1);
 console.log(cuentaCorriente2);
+
+// /*Definición de clases*/
+// class Cliente {
+//   nombreCliente;
+//   dniCliente;
+//   rutCliente;
+// }
+
+// class CuentaCorriente {
+//   numero;
+//   #saldo;
+//   agencia;
+
+//   constructor() {
+//     this.#saldo = 0;
+//     this.numero = '';
+//     this.agencia = '';
+//   }
+
+//   depositoEnCuenta(valor) {
+//     if (valor > 0) this.#saldo += valor;
+//     return this.#saldo;
+//   }
+
+//   retirarDeCuenta(valor) {
+//     if (valor <= this.#saldo) this.#saldo -= valor;
+//     return this.#saldo;
+//   }
+
+//   verSaldo() {
+//     return this.#saldo;
+//   }
+// }
+
+// cuentaDeLeonardo = new CuentaCorriente();
+// //cuentaDeLeonardo.#saldo = 10;
+// let saldo = cuentaDeLeonardo.verSaldo();
+// console.log('El Saldo actual es ' + saldo);
+
+// saldo = cuentaDeLeonardo.depositoEnCuenta(100);
+// console.log('El Saldo actual es ' + saldo);
+
+// saldo = cuentaDeLeonardo.retirarDeCuenta(100);
+// console.log('El Saldo actual es ' + saldo);
+
+// saldo = cuentaDeLeonardo.depositoEnCuenta(10);
+// console.log('El Saldo actual es ' + saldo);
