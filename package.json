@@ -1,0 +1,20 @@
+{
+  "name": "cuentasbancopopular",
+  "version": "1.0.0",
+  "description": "Gestión de Cuentas Corrientes del Banco Popular",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ireneripo/OracleNextEducation_ClassProject_8.git"
+  },
+  "author": "Curso Alura",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Ireneripo/OracleNextEducation_ClassProject_8/issues"
+  },
+  "homepage": "https://github.com/Ireneripo/OracleNextEducation_ClassProject_8#readme"
+}
