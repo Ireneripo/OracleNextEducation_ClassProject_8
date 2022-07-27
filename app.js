@@ -23,12 +23,6 @@ console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 saldo = cuentaDeLeonardo.depositoEnCuenta(150);
 console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 
-// saldo = cuentaDeLeonardo.retirarDeCuenta(60);
-// console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
-
-// saldo = cuentaDeLeonardo.depositoEnCuenta(-10);
-// console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
-
 const cliente2 = new Cliente();
 cliente2.nombreCliente = 'María';
 cliente2.dniCliente = '8593042';
@@ -38,7 +32,10 @@ const cuentaDeMaria = new CuentaCorriente();
 cuentaDeMaria.numero = '2';
 cuentaDeMaria.agencia = '002';
 cuentaDeMaria.cliente = cliente2;
+console.log('Cuenta de María', cuentaDeMaria);
+console.log(cuentaDeMaria.cliente);
 
+cuentaDeMaria.cliente = 0;
 console.log('Cuenta de María', cuentaDeMaria);
 console.log(cuentaDeMaria.cliente);
 
