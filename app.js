@@ -1,20 +1,53 @@
 // Importación de las clases
+import { Cliente } from './Cliente.js';
 import { CuentaCorriente } from './CuentaCorriente.js';
 
+const cliente = new Cliente();
+cliente.nombreCliente = 'Leonardo';
+cliente.dniCliente = '4243985';
+cliente.rutCliente = '48204545';
+
 const cuentaDeLeonardo = new CuentaCorriente();
+cuentaDeLeonardo.numero = '1';
+cuentaDeLeonardo.agencia = '001';
+cuentaDeLeonardo.cliente = cliente;
+
+console.log('Cuenta de Leonardo', cuentaDeLeonardo);
+console.log(cuentaDeLeonardo.cliente);
+
 // cuentaDeLeonardo.saldo = 0;
 
 let saldo = cuentaDeLeonardo.verSaldo();
 console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 
-saldo = cuentaDeLeonardo.depositoEnCuenta(100);
+saldo = cuentaDeLeonardo.depositoEnCuenta(150);
 console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 
-saldo = cuentaDeLeonardo.retirarDeCuenta(60);
-console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+// saldo = cuentaDeLeonardo.retirarDeCuenta(60);
+// console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
 
-saldo = cuentaDeLeonardo.depositoEnCuenta(-10);
-console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+// saldo = cuentaDeLeonardo.depositoEnCuenta(-10);
+// console.log(`El saldo actual de la cuenta de Leonardo es ${saldo}`);
+
+const cliente2 = new Cliente();
+cliente2.nombreCliente = 'María';
+cliente2.dniCliente = '8593042';
+cliente2.rutCliente = '97249575';
+
+const cuentaDeMaria = new CuentaCorriente();
+cuentaDeMaria.numero = '2';
+cuentaDeMaria.agencia = '002';
+cuentaDeMaria.cliente = cliente2;
+
+console.log('Cuenta de María', cuentaDeMaria);
+console.log(cuentaDeMaria.cliente);
+
+cuentaDeLeonardo.transferirParaCuenta(80, cuentaDeMaria);
+let saldo2 = cuentaDeMaria.verSaldo();
+console.log(`El saldo actual de la cuenta de María es ${saldo2}`);
+
+saldo = cuentaDeLeonardo.verSaldo();
+console.log(`El saldo de la cuenta de Leonardo es ${saldo}`);
 
 // const cliente1 = new Cliente();
 
