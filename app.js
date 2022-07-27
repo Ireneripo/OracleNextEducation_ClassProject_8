@@ -26,3 +26,5 @@ console.log(`El saldo actual de la cuenta de María es ${saldo2}`);
 
 saldo = cuentaDeLeonardo.verSaldo();
 console.log(`El saldo de la cuenta de Leonardo es ${saldo}`);
+
+console.log(CuentaCorriente.cantidadCuentas);
